@@ -1,0 +1,174 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Chango&family=Dancing+Script:wght@700&family=Griffy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Frijole&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize !important;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    transition: background-color 1.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/bac.jpg") no-repeat center center;
+    background-size: cover;
+  /* overflow: hidden; */
+}
+
+.Main {
+  max-width: 470px;
+  width: 100%;
+  position: relative;
+  padding: 20px 30px 120px;
+  background: rgba(0, 0, 0, 0.55);
+  /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+  backdrop-filter: blur(11.5px);
+  -webkit-backdrop-filter: blur(11.5px);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.Main h2 {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.Main .login h2 {
+  color: #6777ef;
+}
+
+.Main.active .login {
+  bottom: -0%;
+border-radius: 0px;    
+
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Main .login {
+  width: calc(100% + 220px);
+  height: 100%;
+  background-color: #FFFFFF !important;
+  position: absolute;
+  left: 50%;
+  bottom: -86%;
+  transform: translateX(-50%);
+  padding: 20px 140px;
+  border-radius: 35%;
+  transition: all 0.8s ease !important;
+}
+
+.Main form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #ffffff;
+  margin: 40px 0;
+}
+
+.Main form input {
+  padding: 10px;
+  background-color: transparent;
+  color: #6777ef;
+  border: 2px solid #565D6D;
+  outline: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.Main form input.wrong{
+    border: 2px solid red!important;
+    color: red; 
+}
+
+.Main .login form input {
+  border: 1px solid #6777ef;
+  color: #6777ef;
+}
+.Main form input::placeholder {
+  color: #333;
+  font-weight: 400;
+}
+
+.Main .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #6777ef;
+  cursor: pointer;
+}
+
+.checkbox label {
+  accent-color: #6777ef;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.login a {
+  color: #333;
+  cursor: pointer;
+  text-decoration: none;
+}
+.login a:hover {
+  text-decoration: underline;
+}
+
+ .Main input[type="submit"] {
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.Main .login input[type="submit"] {
+  background-color: #6777ef;
+  color: #fff;
+  border: none;
+}
+
+.Main form input::placeholder {
+  color: #fff;
+  font-weight: 400;
+}
+
+.Main  .login form input::placeholder {
+  color: #565D6D;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1199px) {
+}
+
+@media screen and (max-width: 991px) {
+}
+
+@media screen and (max-width: 767px) {
+  /* .card-img img{
+        padding: 0 20px;
+    } */
+}
+
+@media screen and (max-width: 575px) {
+}
+
+@media screen and (max-width: 362px) {
+}
+
+/* @media all and (min-width: 10px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+} */
