@@ -1,0 +1,77 @@
+let Main = document.querySelector(".Main");
+let SignupLink = document.querySelector(".SignupLink");
+let login_header = document.querySelector(".login h2");
+
+let signUpUsername = document.querySelector(".signUpUsername");
+let signUpPassword = document.querySelector(".signUpPassword");
+let signUpconfirmedPassword = document.querySelector(".signUpconfirmedPassword");
+let SignupForm = document.querySelector(".SignupForm");
+
+let logInUsername = document.querySelector(".logInUsername");
+let logInPassword = document.querySelector(".logInPassword");
+let logInForm = document.querySelector(".logInForm");
+
+
+
+
+
+
+
+let users = JSON.parse(localStorage.getItem('users')) || [];
+
+function saveUsersToLocalStorage() {
+    localStorage.setItem('users', JSON.stringify(users));
+}
+
+SignupForm.onsubmit = function (e) {
+    e.preventDefault();
+
+    const username = signUpUsername.value;
+    const password = signUpPassword.value;
+    const confirmedPassword = signUpconfirmedPassword.value;
+
+
+    if (password != confirmedPassword) {
+        signUpPassword.classList.add("wrong")
+        signUpconfirmedPassword.classList.add("wrong")
+        console.log("password error");
+    } else {
+        signUpPassword.classList.remove("wrong")
+        signUpconfirmedPassword.classList.remove("wrong")
+    }
+
+    const UsrExsist = users.find(user => user.username === username);
+
+    if (UsrExsist) {
+        alert('User already exists');
+    } else {
+        users.push({
+            username: username,
+            password: password
+        });
+        saveUsersToLocalStorage();
+        Main.classList.add("active")
+    }
+
+    console.log(users);
+}
+
+
+
+
+
+logInForm.onsubmit = function (e) {
+    e.preventDefault();
+
+    const username = logInUsername.value;
+    const password = logInPassword.value;
+
+    const comparing = users.find(user => user.username === username && user.password === password);
+
+    if (comparing) {
+        window.location.href = "test.html";
+    } else {
+        alert("Wrong username or password!");
+    }
+}
+
