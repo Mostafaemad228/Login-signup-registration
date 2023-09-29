@@ -4,6 +4,7 @@ let SignupLink = document.querySelector(".SignupLink");
 let login_header = document.querySelector(".login h2");
 
 let signUpUsername = document.querySelector(".signUpUsername");
+let Username = document.querySelector(".userName");
 let signUpPassword = document.querySelector(".signUpPassword");
 let signUpconfirmedPassword = document.querySelector(".signUpconfirmedPassword");
 let SignupForm = document.querySelector(".SignupForm");
@@ -53,8 +54,13 @@ SignupForm.onsubmit = function (e) {
         saveUsersToLocalStorage();
         Main.classList.add("active")
     }
+    Username.value = ""
+    signUpUsername.value = ""
+    signUpPassword.value = ""
+    confirmedPassword.value = ""
 
     console.log(users);
+   
 }
 
 
@@ -70,9 +76,14 @@ logInForm.onsubmit = function (e) {
     const comparing = users.find(user => user.username === username && user.password === password);
 
     if (comparing) {
+        logInUsername.value = ""
+        logInPassword.value = ""
+        logInPassword.classList.remove("wrong")
         window.location.href = "test.html";
     } else {
         alert("Wrong username or password!");
+        logInPassword.classList.add("wrong")
+
     }
 }
 
@@ -80,7 +91,9 @@ logInForm.onsubmit = function (e) {
 // add active to open login side
 
 login_header.addEventListener("click", function () {
-    Main.classList.add("active")
+    Main.classList.add("active");
+    
+
 });
 
 SignupLink.addEventListener("click", function () {
