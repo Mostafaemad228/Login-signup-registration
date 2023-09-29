@@ -1,17 +1,4 @@
-// ///////////////////////////////////////////////////////////
-// add active to open login side
 
-login_header.addEventListener("click", function () {
-    Main.classList.add("active")
-});
-
-SignupLink.addEventListener("click", function () {
-    Main.classList.remove("active")
-});
-
-
-// ////////////////////////////////////////// ////////////////////////////////////////
-// ////////////////////////////////////////// ////////////////////////////////////////
 let Main = document.querySelector(".Main");
 let SignupLink = document.querySelector(".SignupLink");
 let login_header = document.querySelector(".login h2");
@@ -27,6 +14,20 @@ let logInForm = document.querySelector(".logInForm");
 
 
 
+// ///////////////////////////////////////////////////////////
+// add active to open login side
+
+login_header.addEventListener("click", function () {
+    Main.classList.add("active")
+});
+
+SignupLink.addEventListener("click", function () {
+    Main.classList.remove("active")
+});
+
+
+// ////////////////////////////////////////// ////////////////////////////////////////
+// ////////////////////////////////////////// ////////////////////////////////////////
 
 
 
